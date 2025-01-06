@@ -1,23 +1,16 @@
 html * {
+    
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
 
-    header,
-    nav,
-    tag,
-    main,
-    footer{
-        margin: 0px;
-        padding: 0px;
-        margin: 0px;
-        border: 0px;
-        box-sizing: border-box;
-    }
     .title{
         font-size: 25px;
         font-weight:bolder;
         text-align: center;
     }
 
-    /* navigation bar */
+    /* navigation bar ---------------------------------------------- */
     .navigation-elements{
         display:flex;
         background-color:#2B3336;
@@ -27,8 +20,9 @@ html * {
         overflow: hidden;
         width:100%;
         height: 100%;
+        padding:10px;
     }
-    .navigation-elements > ul{
+    .links{
         display:flex;
         list-style: none;
         gap:10px;
@@ -37,9 +31,9 @@ html * {
         align-items: center;
         flex-direction: row;
     }
-    .navigation-elements > ul > .logo {
+    .navigation-elements > .logo {
         margin-right: auto; 
-        padding-left: 10px; 
+        padding-left: 0; 
     }
 
     .navigation-elements > ul > li {
@@ -59,7 +53,7 @@ html * {
         color: white;
     }
 
-    /* Header */
+    /* Header --------------------------------------------------------- */
     .background-image-container{
         position: relative;
     }
@@ -71,7 +65,7 @@ html * {
     }
     .buttons{
         display:flex;
-        gap:0px;
+        gap:auto;
         position: absolute;
         bottom:200px;
         left:50%;
@@ -109,12 +103,12 @@ html * {
         font-weight:bolder;
     }
 
-    /* Quote Scrolling */
+    /* Quote Scrolling --------------------------------------------------- */
     .image-scroll{
         background-color: white;
         overflow: auto;
         white-space: nowrap;
-        padding: 0px;
+        padding: 5px;
         display: flex;
     }
     .image-container{
@@ -133,7 +127,7 @@ html * {
         font-size: 25px;
     }
 
-    /* Our story */
+    /* Our story ------------------------------------------------------- */
     #our-story{
         background-color: white;
         height: 1000px;
@@ -158,7 +152,7 @@ html * {
         font-size: 20px;;
     }
 
-    /* Menu */
+    /* Menu ------------------------------------------------------------- */
     .menu-container{
         display:flex;
         justify-content: center;
@@ -183,35 +177,49 @@ html * {
         padding: 10px;
     }
     
+    /*reviews*/
+    
 
+    /*footer --------------------------------------------------------------- */
     footer{
         background: #2B3336;
         text-align: center;
         padding:30px;
+        border: none;
+        width: 100%;
+    }
+    
+    .logo{
+        padding: 0;
     }
     .information{
         display: flex;
         justify-content: center;
-        align-items: center; /* Centers vertically if needed */
-        gap: 50px; /* Add space between flex items */
-        margin-bottom: 20px; /* Add space below the information section */
+        align-items: center;
+        gap: 0px; /* Add space between flex items */
     }
     .opening-hours > ul{
         list-style: none;
         padding: 0; /* Remove padding inside the list */
-        margin: 0; /* Remove default margins for better control */
+        margin: 10px; 
         line-height: 1.5; /* Add spacing between list items */
+    }
+    
+    .address > p{
+        margin:10px;
+        line-height: 1.5;
     }
     .awards{
         display: flex;
         justify-content: center;
-        gap: 20px; /* Add space between awards */
+        gap: 30px; /* Add space between awards */
         margin-top: 30px; /* Add space above the awards section */
+        margin-bottom: 10px;
     }
     .images{
         display: flex;
-        gap:20px;
-        flex-wrap: wrap; /* Allow wrapping to a new row if there's not enough space */
+        gap:30px;
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
