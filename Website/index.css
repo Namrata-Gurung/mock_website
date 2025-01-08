@@ -18,12 +18,34 @@ html * {
         background-color:#2B3336;
         z-index: 1000;
         overflow: hidden;
+        border-bottom: 3px solid #A9A8A6 ;
     }
     .navigation-elements{
         display:flex;
         justify-content: space-between;
         align-items: center;
         padding:10px 20px;
+        
+    }
+    .menu-container{
+        display:inline-block;
+        cursor:pointer;
+    }
+    .top-bar, .middle-bar, .bottom-bar{
+        width:35px;
+        height: 5px;
+        background-color:#A9A8A6;
+        margin:6px 0;
+        transition:0.4s;
+    }
+    .change .top-bar{
+        transform: translate(0, 11px) rotate(45deg);
+    }
+    .change .middle-bar{
+        opacity: 0;
+    }
+    .change .bottom-bar{
+        transform: translate(0, -11px) rotate(-45deg);
     }
     #logo > img{
         flex-shrink:0;
@@ -34,6 +56,7 @@ html * {
         display:flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         list-style: none;
         gap:20px;
         margin-right: 60px;
@@ -41,6 +64,7 @@ html * {
     }
     #links > ul > li > a{
        color: #A9A8A6;
+       transition:color 0.4s ease;
        text-decoration: none;
        text-align: center;
        font-size: 18px;
@@ -50,7 +74,6 @@ html * {
     }
     #links > ul > li > a:hover{
         color:white;
-        
     }
     #social-media > ul{
         display:flex;
@@ -58,10 +81,6 @@ html * {
         gap:25px;
         margin:0;
         padding:0;
-    }
-    #social-media > ul> li > a:hover{
-        color: white;
-
     }
     #booking-button{
         display:flex;
@@ -72,6 +91,7 @@ html * {
     }
     #booking-button > #reservation-button {
         background-color:#A9A8A6;
+        transition:color 0.4s ease;
         color:#2B3336;
         border: none;
         cursor: pointer;
