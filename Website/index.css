@@ -27,16 +27,14 @@ html * {
         padding:10px 20px;
         
     }
-    .menu-container{
-        display:inline-block;
-        cursor:pointer;
-    }
+
     .top-bar, .middle-bar, .bottom-bar{
-        width:35px;
+        width:40px;
         height: 5px;
         background-color:#A9A8A6;
         margin:6px 0;
         transition:0.4s;
+        
     }
     .change .top-bar{
         transform: translate(0, 11px) rotate(45deg);
@@ -47,10 +45,10 @@ html * {
     .change .bottom-bar{
         transform: translate(0, -11px) rotate(-45deg);
     }
+   
     #logo > img{
         flex-shrink:0;
         margin-right:5px;
-    }
     }
     #links > ul{
         display:flex;
@@ -278,4 +276,4 @@ html * {
         flex-wrap: wrap;
         justify-content: center;
     }
-;
+}

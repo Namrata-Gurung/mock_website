@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="media.css" />
     <!--(font awesome)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
     <title>Lancaster's Restaurant</title>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
   </head>
 
 <body id="homepage">
@@ -17,7 +18,7 @@
             
 
             <!--hamburger icon section-->
-            <div class="menu-container" onclick="menuFunction(this)" >
+            <div class="menu-container" onclick="openMenu(this)" >
                 <div class="top-bar"></div>
                 <div class="middle-bar"></div>
                 <div class="bottom-bar"></div>
@@ -29,7 +30,7 @@
                 <img src="images/logos/Lancaster's-logos_short.jpeg" alt="Lancaster's Logo" width="150px" height="auto">
             </div>
             
-            <!--link section -->
+            <!--link section 1-->
             <div id="links">
                 <ul> 
                     <li><a href="#home">Home</a></li> 
@@ -38,6 +39,19 @@
                     <li><a href="#find-us">Find Us</a></li>
                     <li><a href="#careers">Careers</a></li>
                 </ul>
+            </div>
+
+            <!--link navigation overlay-->
+            <div id="navigation-overlay" class="overlay-menu">
+                <div id="overlay-links" onclick="closeMenu(this)">
+                    <ul> 
+                        <li><a href="#home">Home</a></li> 
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#find-us">Find Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
             </div>
 
              <!--social media link section -->
