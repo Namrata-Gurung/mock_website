@@ -15,12 +15,13 @@
     <!--Font used under the SIL Open Font Licence Version 1.1-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:opsz,wght@6..96&display=swap">
     
+    
     <title>Lancaster's Restaurant</title>
     <script defer src="index.js"></script>
 
     <style>
         p{
-           font-family: "Bodoni Moda", serif;
+           font-family: 'Bodoni Moda', serif;
            font-optical-sizing: auto;
            font-weight: 400;
            font-style: normal;
@@ -90,6 +91,7 @@
     </nav>
 
 
+
     <header id="home">
         <div class="header">
             <div class="background-image-container">
@@ -98,27 +100,20 @@
                 width="100%"
                 height="650"/>
                 <!--overlay company logo on the header-->
-                <div class="overlay-logo"><img src="images/logos/Lancaster's-logos_transparent.png" 
-                    alt="Lancaster's Restaurant logo" 
-                    width="100%" 
-                    height="auto"/></div>
+               
+                <div class="overlay-logo">
+                    <h3><small>Discover</small> <i><span style="color:white;" >Conscious Gastronomy</span></i> <small>in the heart of</small> <i><span style="color:white;">St James's</span></i></h3>
+                </div>
 
                 <!--overlay buttons-->
                 <!--quick access buttons-->
                 <div class="buttons">
                 <!--add buttons for each nav link-->
-                    <a href="#menu"><button id="menu-button">Menu</button></a>
-                    <a href="#reservations"><button id="book-button">Book</button></a>
+                    <a href="#menu"><button id="menu-button"> View Menu</button></a>
                 </div>
             </div>
         </div>
     </header>
-
-
-    <section class="tag">
-        <h2> Discover Conscious Gastronomy in the heart of St James's </h2>
-    </section>
-
 
     <main>
         <!--code source: https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp-->
@@ -132,7 +127,7 @@
                     <div class="overlay-text"><b>“Well-balanced dishes which are packed with flavour"</b><br>Michelin Guide</div>
                 </div>
                 <div class="image-container">
-                    <img src="images/rerestaurant/restaurant-3.jpeg"
+                    <img src="images/rerestaurant/restaurant-1.jpeg"
                     alt=""
                     width="500"
                     height="auto"/>
@@ -161,27 +156,38 @@
             <div class="grid-container">
                 <!--column 1-->
                 <div class="grid-item-images">
-                    <img src="images/people/ana-cooking.jpeg" alt="An image of Chef Ana Lancaster cooking." width="100%" height="auto" />
+                    <img src="images/people/ana-cooking.jpeg" alt="An image of Chef Ana Lancaster cooking."/>
                 </div>
                 <div class="grid-item-text">
-                    <p> <b>Lancaster's</b> was founded by chef <strong>Ana Lancaster</strong> and Sommelier <strong>Robert Lancaster</strong> in May 2005. The essence of this combination makes up much of Fallows DNA, <strong><i> where conscious culinary creativity meets hospitality experience and passion for wine.</i></strong></p>
+                    <p> <Strong>Lancaster's</Strong> was founded by chef <i>Ana Lancaster</i> and Sommelier <i>Robert Lancaster</i> in <i>May 2005</i>. The <em>essence</em> of this combination makes up much of Fallows <em>DNA</em>, where <em>conscious culinary creativity</em> meets hospitality experience and passion for wine.</p>
                 </div>
                 <div class="grid-item-images">
-                    <img src="images/people/robert-bottle.jpeg" alt="An image of Sommelier Robert Lancaster" width="100%" height="auto" />
+                    <img src="images/rerestaurant/restaurant-3.jpeg" alt="An image of Sommelier Robert Lancaster" />
                 </div>
                 <!--column 2-->
                 <div class="grid-item-text">
-                    <p>What followed from their meeting were a series of sold-out residencies to establish <b>Lancaster’s</b> as <strong><i>one of the most exciting restaurant concepts on the UK restaurant scene.</i></strong>
+                    <p>What followed from their meeting were a series of <em>sold-out residencies</em> to establish <b>Lancaster's</b> as one of the most <em>exciting restaurant concepts</em> on the UK restaurant scene.
                     </p>
                 </div>
                 <div class="grid-item-images">
-                    <img src="images/rerestaurant/restaurant-3.jpeg" alt="An image of Lancaster's resturant interior" width="100%" height="auto" />
+                    <img src="images/people/robert-bottle.jpeg" alt="An image of Lancaster's resturant interior"/>
                 </div>
                 <div class="grid-item-text">
-                    <p><b>Lancaster’s</b> permanent home in <b>St James’s market</b> was established in November 2010 and has since attracted a string of awards including both the <strong>Marie Claire</strong> and <strong>GQ</strong> <b><i>‘sustainable restaurant of the year’</i></b> and the <strong>Caterer</strong> award for <b><i>‘best new restaurant’.</i></b></p>
+                    <p><b>Lancaster's</b> permanent home in <i>St James's market</i> was established in <i>November 2010</i> and has since attracted a string of awards including both the <b>Marie Claire</b> and <b>GQ</b> <b><em>'sustainable restaurant of the year'</em></b> and the <b>Caterer</b> award for <b><em>'best new restaurant'.</em></b></p>
                 </div>
             </div>
-            <p style="color: #2B3336;"><b><i>Keep yourself updated by following us on Instagram. For collaborations please contact marketing@lancasters.com For business opportunities please contact Robert Lancaster at office@ lancasters.com.</i></b></p>
+            <div id="information">
+                <p>
+                    <b><i>
+                        Keep yourself updated by following us on <a href="https://www.instagram.com/fallowrestaurant" target="_blank">Instagram.</a>
+                            
+                           
+                           For collaborations please contact <a href="mailto:marketing@lancasters.com">marketing@lancasters.com</a>
+                           
+                           For business opportunities please contact Robert Lancaster at <a href="mailto:office@ lancasters.com">office@ lancasters.com.</a>
+                        </i></b>
+                </p>
+            </div>
 
         </section>
 
