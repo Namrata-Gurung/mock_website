@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="desktop.css" />
     <link rel="stylesheet" href="media.css" />
     
     <!--(font awesome)-->
@@ -17,6 +17,7 @@
     
     
     <title>Lancaster's Restaurant</title>
+   
     <script defer src="index.js"></script>
 
     <style>
@@ -29,281 +30,286 @@
     </style>
   </head>
 
-<body id="homepage">
-    <!--navigation bar--> 
-    <nav id="navigation-bar"> 
-        <div class="navigation-elements"> 
-            
+  <body id="homepage">
 
-            <!--hamburger icon section-->
-            <div class="menu-container" onclick="openMenu(this)" >
-                <div class="top-bar"></div>
-                <div class="middle-bar"></div>
-                <div class="bottom-bar"></div>
-            </div>
 
+    <!--navigation bar-->
+    <nav>
+        <section class="container" id="navigation-bar">
+            <div class="navigation-elements"> 
             
-            <!--logo section-->
-            <div id="logo">
-                <img src="images/logos/Lancaster's-logos_short.jpeg" alt="Lancaster's Logo" width="150px" height="auto">
-            </div>
-            
-            <!--link section 1-->
-            <div id="links">
-                <ul> 
-                    <li><a href="#home">Home</a></li> 
-                    <li><a href="#our-story">Our Story</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#find-us">Find Us</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                </ul>
-            </div>
-
-            <!--link navigation overlay-->
-            <div id="navigation-overlay" class="overlay-menu">
-                <div id="overlay-links" onclick="closeMenu(this)">
+                <!--hamburger icon section-->
+                <div class="nav-menu-container" onclick="openMenu(this)" >
+                    <div class="top-bar"></div>
+                    <div class="middle-bar"></div>
+                    <div class="bottom-bar"></div>
+                </div>
+                
+                <!--logo section-->
+                <div id="logo">
+                    <img src="images/logos/Lancaster's-logos_short.jpeg" alt="Lancaster's Logo" width="150px" height="auto">
+                </div>
+                
+                <!--link section 1-->
+                <div id="links">
                     <ul> 
-                        <li><a href="#home">Home</a></li> 
-                        <li><a href="#our-story">Our Story</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#find-us">Find Us</a></li>
-                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#homepage">HOME</a></li> 
+                        <li><a href="#our-story">OUR STORY</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#footer">FIND US</a></li>
+                        <li><a href="#careers">CAREERS</a></li>
                     </ul>
                 </div>
-            </div>
+    
+                <!--link navigation overlay-->
+                <div id="navigation-overlay" class="overlay-menu">
+                    <div id="overlay-links" onclick="closeMenu(this)">
+                        <ul> 
+                            <li><a href="#homepage">HOME</a></li> 
+                            <li><a href="#our-story">OUR STORY</a></li>
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#find-us">FIND US</a></li>
+                            <li><a href="#careers">CAREERS</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                 <!--social media link section -->
+                 <div id="social-media">
+                    <ul>
+                        <li><a href="https://www.instagram.com/fallowrestaurant" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color:#A9A8A6;"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCJ901NqoRaXMnIm7aOjLyuA" target="_blank" ><i class="fa-brands fa-youtube fa-xl" style="color:#A9A8A6;"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@fallow_restaurant?lang=en" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color:#A9A8A6;"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!--booking button section-->
+                <div id="booking-button">
+                     <!-- <a href="#Reservations" id="reservation-link">Reserve A Table</a> -->
+                     <button id="reservation-button" onclick="location.href='#reservations';">RESERVE A TABLE</button>
+                </div>
 
-             <!--social media link section -->
-             <div id="social-media">
-                <ul>
-                    <li><a href="https://www.instagram.com/fallowrestaurant" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color:#A9A8A6;"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCJ901NqoRaXMnIm7aOjLyuA" target="_blank" ><i class="fa-brands fa-youtube fa-xl" style="color:#A9A8A6;"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@fallow_restaurant?lang=en" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color:#A9A8A6;"></i></a></li>
-                </ul>
             </div>
-            
-            <!--booking button section-->
-            <div id="booking-button">
-                 <!-- <a href="#Reservations" id="reservation-link">Reserve A Table</a> -->
-                 <button id="reservation-button" onclick="location.href='#reservations';">Reserve A Table</button>
-            </div>
-            
-        </div>
+        </section>
     </nav>
 
-
-
-    <header id="home">
-        <div class="header">
-            <div class="background-image-container">
-                <img src="images/rerestaurant/restaurant-4.jpeg"
-                alt="An image"
-                width="100%"
-                height="650"/>
-                <!--overlay company logo on the header-->
-               
-                <div class="overlay-logo">
-                    <h3><small>Discover</small> <i><span style="color:white;" >Conscious Gastronomy</span></i> <small>in the heart of</small> <i><span style="color:white;">St James's</span></i></h3>
+    <!--header section-->
+    <header>
+        <section class="container" id="header">
+                
+                <div id="overlay-header">
+                    <ul>
+                        <li>
+                            <h3 id="tag"><small>Discover</small> <i><span style="color:white;" >Conscious Gastronomy</span></i> <small>in the heart of</small> <i><span style="color:white;">St James's</span></i>
+                            </h3>
+                        </li>
+                       
+                        <li>
+                            <a href="#menu"><button id="menu-button"> VIEW MENU</button></a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!--overlay buttons-->
-                <!--quick access buttons-->
-                <div class="buttons">
-                <!--add buttons for each nav link-->
-                    <a href="#menu"><button id="menu-button"> View Menu</button></a>
-                </div>
-            </div>
-        </div>
+        </section>
     </header>
 
     <main>
+
+        <!--quotes section-->
         <!--code source: https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp-->
-        <article class="quotes"> 
-            <div class="image-scroll">
+        <section class="container" id="quotes">
+            <article class="quote-scroll">
                 <div class="image-container">
                     <img src="images/food/food-1.jpeg"
                     alt="Image of a chef adding the garnishes to a dish"
-                    width="500"
+                    width="550"
                     height="auto"/>
+                    
                     <div class="overlay-text"><b>“Well-balanced dishes which are packed with flavour"</b><br>Michelin Guide</div>
                 </div>
+
                 <div class="image-container">
                     <img src="images/rerestaurant/restaurant-1.jpeg"
                     alt=""
-                    width="500"
+                    width="550"
                     height="auto"/>
+                    
                     <div class="overlay-text"><b>“Lancaster’s is generous and indulgent, relaxed and innovative, and in short, it’s everything you want from eating out."</b><br>Squaremeal</div>
                 </div>
+
                 <div class="image-container">
                     <img src="images/food/food-service-1.jpeg"
                     alt=""
-                    width="500"
+                    width="550"
                     height="auto"/>
+                    
                     <div class="overlay-text"><b>“Style and substance in equal - and environmentally conscious – measure”</b><br>CONDÉ NAST TRAVELLER</div>
                 </div>
+
                 <div class="image-container">
                     <img src="images/people/robert-glasses.jpeg"
                     alt=""
-                    width="500"
+                    width="550"
                     height="auto"/>
+                    
                     <div class="overlay-text"><b>“Sustainable kitchen offers charm, finesse and an enlightened drinks list"</b><br>Fay Maschler</div>
                 </div>
-            </div>
-        </article>
-
-
-        <section id="our-story">
-            <div class="title"><h2>Our Story</h2></div>
-            <div class="grid-container">
-                <!--column 1-->
-                <div class="grid-item-images">
-                    <img src="images/people/ana-cooking.jpeg" alt="An image of Chef Ana Lancaster cooking."/>
-                </div>
-                <div class="grid-item-text">
-                    <p> <Strong>Lancaster's</Strong> was founded by chef <i>Ana Lancaster</i> and Sommelier <i>Robert Lancaster</i> in <i>May 2005</i>. The <em>essence</em> of this combination makes up much of Fallows <em>DNA</em>, where <em>conscious culinary creativity</em> meets hospitality experience and passion for wine.</p>
-                </div>
-                <div class="grid-item-images">
-                    <img src="images/rerestaurant/restaurant-3.jpeg" alt="An image of Sommelier Robert Lancaster" />
-                </div>
-                <!--column 2-->
-                <div class="grid-item-text">
-                    <p>What followed from their meeting were a series of <em>sold-out residencies</em> to establish <b>Lancaster's</b> as one of the most <em>exciting restaurant concepts</em> on the UK restaurant scene.
-                    </p>
-                </div>
-                <div class="grid-item-images">
-                    <img src="images/people/robert-bottle.jpeg" alt="An image of Lancaster's resturant interior"/>
-                </div>
-                <div class="grid-item-text">
-                    <p><b>Lancaster's</b> permanent home in <i>St James's market</i> was established in <i>November 2010</i> and has since attracted a string of awards including both the <b>Marie Claire</b> and <b>GQ</b> <b><em>'sustainable restaurant of the year'</em></b> and the <b>Caterer</b> award for <b><em>'best new restaurant'.</em></b></p>
-                </div>
-            </div>
-            <div id="information">
-                <p>
-                    <b><i>
-                        Keep yourself updated by following us on <a href="https://www.instagram.com/fallowrestaurant" target="_blank">Instagram.</a>
-                            
-                           
-                           For collaborations please contact <a href="mailto:marketing@lancasters.com">marketing@lancasters.com</a>
-                           
-                           For business opportunities please contact Robert Lancaster at <a href="mailto:office@ lancasters.com">office@ lancasters.com.</a>
-                        </i></b>
-                </p>
-            </div>
-
+            </article>
+        
         </section>
 
-        <!--menu section-->
-        <section id="menu">
+        <!--our story section-->
+        <section class="container" id="our-story">
+            <h2> OUR STORY</h2>
+        
+            <div class="story-panels">
+                <div class="split-1">
+                    <div class="story-elements">
+                        <img src="images/people/ana-cooking.jpeg" width="300" height="auto" alt="An image of Chef Ana Lancaster cooking."/>
+                        <p> <Strong>Lancaster's</Strong> was founded by chef <i>Ana Lancaster</i> and Sommelier <i>Robert Lancaster</i> in <i>May 2005</i>. The <em>essence</em> of this combination makes up much of Fallows <em>DNA</em>, where <em>conscious culinary creativity</em> meets hospitality experience and passion for wine.</p>
+                    </div>
 
-            <div class="menu-container">
-                <div class="title"><h2>Menu</h2></div>
-                <div class="menu-text">We are happy to accommodate dietary requirements. <em>Please just make a note in your reservation or let us know upon arrival.</em>  Lancaster’s is on ground level, with an accessible bathroom situated on the same floor. </div>
-                
-                <div class="image-container">
-                    <div><img src="images/food/food-6.jpeg" alt="food-6" width="80%" height="auto">
+                </div>
+
+            
+                <div class="split-2">
+                    <div class="story-elements">
+                        <img src="images/rerestaurant/restaurant-3.jpeg" width="300" height="auto" alt="An image of Sommelier Robert Lancaster" />
+                        <p>What followed from their meeting were a series of <em>sold-out residencies</em> to establish <b>Lancaster's</b> as one of the most <em>exciting restaurant concepts</em> on the UK restaurant scene.
+                        </p>
                     </div>
                 </div>
-                
-                
-                <div class="menu-button" >
-                    <a href="#view-menu"><button id="view-menu-button">View Menu</button></a>
+
+            
+                <div class="split-3">
+                    <div class="story-elements">
+                        <img src="images/people/robert-bottle.jpeg" width="300" height="auto" alt="An image of Lancaster's resturant interior"/>
+                         <p><b>Lancaster's</b> permanent home in <i>St James's market</i> was established in <i>November 2010</i> and has since attracted a string of awards including both the <b>Marie Claire</b> and <b>GQ</b> <b><em>'sustainable restaurant of the year'</em></b> and the <b>Caterer</b> award for <b><em>'best new restaurant'.</em></b></p>
+                    </div>
                 </div>
             </div>
-
         </section>
 
-        <!--customer reviews section-->
-        <section class="reviews">
-
-            <div class="title">
-                <h2>Reviews</h2>
-            </div>
-            
-            <div class="container">
-                <!--review content goes here -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aspernatur laborum vero, quam consequuntur earum odio excepturi laboriosam nisi itaque officiis assumenda nihil sequi amet voluptates expedita ab eaque! Voluptatem?</p>
-              </div>
-
-        </section>
-
-        <!--Reservations/booking section-->
-        <section id="reservations">
-            <div class="title">
-                <h2>Reservations</h2>
-
-            </div>
-        </section>
+        <!--parallax background-->
+        <div class="parallax"></div>
     
+        <!--menu section-->
+        <section class="container" id="menu">
+
+
+            <h2>MENU</h2>
+            <div class="menu-elements">
+                <object class="pdf" data="Lancaster's Dinner Menu 17 Jun 2024.pdf" width="800" height="1150">
+                </object> 
+            </div>
+        
+        
+        </section>
+
+        <!--reviews-->
+        <section class="container" id="reviews">
+        
+            <h2>Reviews</h2>
+          
+        </section>
+
+        <!--reservations-->
+        <section class="container" id="reservations">
+            <h2>Reservations</h2>
+        
+        </section>
     </main>
 
 
-    <footer>
-        <div class="information">
+    <!--footer-->
+    <footer class="container" id="footer">
+        <div class="container-1">
 
             <section class="logo">
                 <img src="images/logos/Lancaster's-logos_transparent.png"
                 alt="Lancaster's Restaurant logo"
-                width="150"
-                height="auto"/>
+                width="200"
+                height="200"/>
             </section>
 
-            <section class="opening-hours" style="color:white;" >
-                <!---->
-                <h3>Opening times</h3>
+            <section class="map">
+                <iframe width="250" height="170" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1333299279212952%2C51.50878252424312%2C-0.13147115707397464%2C51.51005625298378&amp;layer=mapnik&amp;marker=51.5094193930647%2C-0.1324005424976349" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=51.509419&amp;mlon=-0.132401#map=19/51.509419/-0.132401&amp;layers=N">View Larger Map</a></small>
+            </section>
+
+            <section class="address">
+                <h3>ADDRESS</h3>
+                <i class="fa-solid fa-location-arrow fa-xl" style="color: #ffffff;"></i>
+                <p><b>Lancaster's Restaurant</b><br>52 Haymarket<br>London<br>SW1Y 4RP</p>
+            </section>
+
+            <section class="opening-hours">
+                <h3>OPENING TIMES</h3>
+                <i class="fa-solid fa-clock fa-xl" style="color: #ffffff;"></i>
+                <p>
+                    <b>Mon - Fri</b>: 07:30 am - 11 pm<br>
+                    <b>Sat</b>: 9am - 11pm<br>
+                    <b>Sun</b>: 11:30 am - 10 pm
+                </p>
+            </section>
+
+            <section class="social-media-links">
+                <h3>OUR SOCIAL MEDIA</h3>
                 <ul>
-                     <li>Mon - Fri: 07:30 am - 11 pm</li>
-                     <li>Sat: 9am - 11pm</li>
-                     <li>Sun: 11:30 am - 10 pm</li>
+                    <li>
+                        <a href="https://www.instagram.com/fallowrestaurant" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color:white;"></i></a> Instagram
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCJ901NqoRaXMnIm7aOjLyuA" target="_blank" ><i class="fa-brands fa-youtube fa-xl" style="color:white;"></i></a> Youtube
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@fallow_restaurant?lang=en" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color:white;"></i></a> Tiktok
+                    </li>
                 </ul>
             </section>
-
-            <section class="address" style="color: white;" >
-                <h3>Address</h3>
-                <p>52 Haymarket<br>London<br>SW1Y 4RP</p>
-            </section>
-
         </div>
 
-        <section class="awards">
-            <div class="images">
-                <!--come back to this one-->
-            
-                <div><img src="images/awards/code-1.svg"
+        <div class="container-2">
+            <section class="awards">
+                <img src="images/awards/code-1.svg"
                     alt="Code 30 Under 30 Award"
                     width="70"
                     height="auto"
-                    /></div>
-
-                <div><img src="images/awards/hotdinners.svg"
+                />
+                <img src="images/awards/hotdinners.svg"
                     alt="Hot Dinner's Best New Restaurant Award"
-                    width="120"
-                    height="auto"
-                    /></div>
-
-                <div><img src="images/awards/National-Restaurant-Awards.svg"
+                    width="130"
+                    height="auto" 
+                />
+                <img src="images/awards/National-Restaurant-Awards.svg"
                     alt="National Restaurant Awards"
                     width="130"
                     height="auto"
-                    /></div>
-
-                <div><img src="images/awards/Squaremeal.svg"
+                />
+                <img src="images/awards/Squaremeal.svg"
                     alt="Squaremeal Gold Award"
                     width="150"
                     height="auto"
-                    /></div>
-                
-                <div><img src="images/awards/B-Corp-Logo-White-RGB.png"
+                />
+                <img src="images/awards/B-Corp-Logo-White-RGB.png"
                     alt="B Corp Certification"
                     width="30"
                     height="auto"
-                    /></div>
-            </div>
+                />
+            </section>
 
-        </section>
-
-        <p style="color: white;">Source: <a href="https://fallowrestaurant.com/">https://fallowrestaurant.com/</a></p>
+            <section class="credit">
+                <small>
+                    <p>Website information sourced from <a href="https://fallowrestaurant.com/">https://fallowrestaurant.com/</a></p>
+                 
+                    <p>The OpenStreetMap database is made available under the <a href="http://opendatacommons.org/licenses/odbl/1.0/" target="_blank">Open Database Licence</a>. Any rights in the individual contents of the database are licensed under the <a href="https://opendatacommons.org/licenses/dbcl/1.0/" target="_blank">Database Contents License</a>.</p>
+                </small>
+            </section>
+            
+        </div>
 
     </footer>
 
 
-</body>
+  </body>
+
 </html>
