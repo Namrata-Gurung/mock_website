@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
-    <link rel="stylesheet" href="desktop.css" />
-    <link rel="stylesheet" href="media.css" />
+    <!--media breakpoints sourced from: https://www.browserstack.com/guide/responsive-design-breakpoints -->
+    <link rel="stylesheet" href="desktop.css"/>
+    <link rel="stylesheet" href="tablet.css"/>
+    <link rel="stylesheet" href="mobile.css"/>
     
     <!--(font awesome)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
@@ -39,7 +41,7 @@
             <div class="navigation-elements"> 
             
                 <!--hamburger icon section-->
-                <div class="nav-menu-container" onclick="openMenu(this)" >
+                <div class="nav-menu-container" id="hamburger-menu">
                     <div class="top-bar"></div>
                     <div class="middle-bar"></div>
                     <div class="bottom-bar"></div>
@@ -55,21 +57,27 @@
                     <ul> 
                         <li><a href="#homepage">HOME</a></li> 
                         <li><a href="#our-story">OUR STORY</a></li>
-                        <li><a href="#menu">MENU</a></li>
-                        <li><a href="#footer">FIND US</a></li>
+                        <li><a href="#menus">MENUS</a></li>
+                        <li><a href="#find-us">FIND US</a></li>
                         <li><a href="#careers">CAREERS</a></li>
                     </ul>
                 </div>
     
                 <!--link navigation overlay-->
                 <div id="navigation-overlay" class="overlay-menu">
-                    <div id="overlay-links" onclick="closeMenu(this)">
+                    <div id="overlay-links">
                         <ul> 
                             <li><a href="#homepage">HOME</a></li> 
                             <li><a href="#our-story">OUR STORY</a></li>
-                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#menus">MENUS</a></li>
                             <li><a href="#find-us">FIND US</a></li>
                             <li><a href="#careers">CAREERS</a></li>
+                        </ul>
+
+                        <ul id="overlay-social-media">
+                            <li><a href="https://www.instagram.com/fallowrestaurant" target="_blank"><i class="fa-brands fa-instagram" ></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCJ901NqoRaXMnIm7aOjLyuA" target="_blank" ><i class="fa-brands fa-youtube" ></i></a></li>
+                            <li><a href="https://www.tiktok.com/@fallow_restaurant?lang=en" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +113,7 @@
                         </li>
                        
                         <li>
-                            <a href="#menu"><button id="menu-button"> VIEW MENU</button></a>
+                            <a href="#menus"><button id="menu-button"> VIEW MENUS</button></a>
                         </li>
                     </ul>
                 </div>
@@ -165,7 +173,7 @@
             <div class="story-panels">
                 <div class="split-1">
                     <div class="story-elements">
-                        <img src="images/people/ana-cooking.jpeg" width="300" height="auto" alt="An image of Chef Ana Lancaster cooking."/>
+                        <img src="images/people/ana-cooking.jpeg" width="350" height="auto" alt="An image of Chef Ana Lancaster cooking."/>
                         <p> <Strong>Lancaster's</Strong> was founded by chef <i>Ana Lancaster</i> and Sommelier <i>Robert Lancaster</i> in <i>May 2005</i>. The <em>essence</em> of this combination makes up much of Fallows <em>DNA</em>, where <em>conscious culinary creativity</em> meets hospitality experience and passion for wine.</p>
                     </div>
 
@@ -174,7 +182,7 @@
             
                 <div class="split-2">
                     <div class="story-elements">
-                        <img src="images/rerestaurant/restaurant-3.jpeg" width="300" height="auto" alt="An image of Sommelier Robert Lancaster" />
+                        <img src="images/rerestaurant/restaurant-3.jpeg" width="350" height="auto" alt="An image of Sommelier Robert Lancaster" />
                         <p>What followed from their meeting were a series of <em>sold-out residencies</em> to establish <b>Lancaster's</b> as one of the most <em>exciting restaurant concepts</em> on the UK restaurant scene.
                         </p>
                     </div>
@@ -183,9 +191,18 @@
             
                 <div class="split-3">
                     <div class="story-elements">
-                        <img src="images/people/robert-bottle.jpeg" width="300" height="auto" alt="An image of Lancaster's resturant interior"/>
+                        <img src="images/people/robert-bottle.jpeg" width="350" height="auto" alt="An image of Lancaster's resturant interior"/>
                          <p><b>Lancaster's</b> permanent home in <i>St James's market</i> was established in <i>November 2010</i> and has since attracted a string of awards including both the <b>Marie Claire</b> and <b>GQ</b> <b><em>'sustainable restaurant of the year'</em></b> and the <b>Caterer</b> award for <b><em>'best new restaurant'.</em></b></p>
                     </div>
+                </div>
+
+                <div id="story-information">
+                    <p>
+                        <b><i>
+                            Keep yourself updated by following us on <a href="https://www.instagram.com/fallowrestaurant" target="_blank">Instagram.</a> For collaborations please contact <a href="mailto:marketing@lancasters.com">marketing@lancasters.com</a> For business opportunities please contact Robert Lancaster at <a href="mailto:office@ lancasters.com">office@ lancasters.com.</a>
+                            </i>
+                        </b>
+                    </p>
                 </div>
             </div>
         </section>
@@ -194,29 +211,280 @@
         <div class="parallax"></div>
     
         <!--menu section-->
-        <section class="container" id="menu">
+        <section class="container" id="menus">
 
+            <h2>MENUS</h2>
 
-            <h2>MENU</h2>
-            <div class="menu-elements">
-                <object class="pdf" data="Lancaster's Dinner Menu 17 Jun 2024.pdf" width="800" height="1150">
-                </object> 
+            <div class="menu-panels">
+                 <!--breakfast-->
+                <div class="menu-button-container" id="breakfast">
+                    <button>Breakfast <br><small>07:30-10:30</small> </button>
+                </div>
+                <!--lunch-->
+                <div class="menu-button-container" id="lunch">
+                    <button>Lunch<br><small>12:00-14:30</small></button>
+                </div>
+                <!--dinner-->
+                <div class="menu-button-container" id="dinner">
+                   <button id="dinner-button">Dinner<br><small>17:00-22:30</small></button>
+                </div>
+
+                <!--code adapted from source:https://www.w3schools.com/howto/howto_css_modals.asp -->
+                <!--modal for dinner menu-->
+                <div id="dinner-modal" class="modal">
+                    <div class="dinner-content">
+
+                        <!--close button-->
+                        <span class="close" id="close-modal">
+                            <i class="fa-solid fa-utensils fa-2xl" style="color:white;"></i>
+                        </span>
+
+                        <!--PDF object-->
+                        <object class="pdf" data="Lancaster's Dinner Menu 17 Jun 2024.pdf" width="400" height="600">
+                        </object>
+
+                    </div>
+                </div>
+
+                <!--drinks-->
+                <div class="menu-button-container" id="drinks">
+                    <button>Drinks<br><small>-All Day-</small></button>
+                </div>
+                 <!--dessert-->
+                <div class="menu-button-container" id="desserts">
+                    <button>Desserts<br><small>-All Day-</small></button>
+                </div>
             </div>
+
+            <div id="menu-information">
+                <p><b><i>We are happy to accommodate dietary requirements. <strong>Please just make a note in your reservation or let us know upon arrival.</strong> </i></b></p>
+            </div>`
         
+        </section>
+
+        <!--parallax background-->
+        <div class="parallax-2"></div>
+
+        <!--reservations-->
+        <section class="container" id="reservations">
+            <h2>RESERVATIONS</h2>
         
         </section>
 
         <!--reviews-->
-        <section class="container" id="reviews">
-        
-            <h2>Reviews</h2>
-          
-        </section>
+        <!--Source: https://www.tripadvisor.co.uk/Restaurant_Review-g186338-d21270387-Reviews-Fallow_St_James_s-London_England.html -->
+        <article class="container" id="reviews">
+            <div class="review-content">
+                <h2>CUSTOMER REVIEWS</h2>
+                <div class="first-row">
+                    <div id="box-1">
+                        <div class="review-header">
+                            <p id="username">Mandy A</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div> 
 
-        <!--reservations-->
-        <section class="container" id="reservations">
-            <h2>Reservations</h2>
+                        <div id="key-quote">
+                            <p><b><em>"Fantastic vibe, service, staff and food."</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • friends</p>
+                        </div>
+
+                        <div id="comment">
+                            <p>My brother and I have been following Fallow on social media for some time and finally decided to take a visit with our partners.<br>
+                            On arrival, staff were friendly and helpful and we were taken to our table.<br>
+                            The restaurant has a great vibe and watching the chefs (or should i say artists) at work is just something else.<br>
+                            We ordered a few things off the menu to start as there was so much choice and we wanted it all!<br>
+                            Our server was knowledgeable and explained what was not available and what he would recommend too.<br>
+                            What makes for amazing service. Offering drinks when they can see our drinks were running low. All without being asked.<br>
+                            Table wiped between courses.<br>
+                            Friendly, happy staff. Just great.<br>
+                            The food was 10/10 and my husband says its the best burger he's ever had!<br>
+                            We unfortunately didn't order dessert as we were too full but will do next time we visit.<br>
+                            All in all a fantastic visit. We really couldn't fault any of it. Staff, vibe, service and food all just fantastic. Well done Fallow we are already planning our next visit.<br>
+                            Written 17 August 2024
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="box-2">
+                        <div class="review-header">
+                            <p ide="username">Tom C</p>
+
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+
+                        <div id="key-quote">
+                            <p><b><em>"Great brunch"</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • couples</p>
+                        </div>
+
+                        <div id="comment">
+                            <p>Just had brunch food delicious service 5star this restaurant is performing at every level we just <em>love</em> coming back.</em> If you’re anywhere near it’s a <em>must</em> book as very busy.<br>Written 17 August 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-row">
+                    <div id="box-3">
+                        <div class="review-header">
+                            <p id="username">christopher a</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+
+                        <div id="key-quote">
+                            <p><b><em>"Excellent food and great atmosphere"</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • couples</p>
+                        </div>
+
+                        <div id="comment">
+                            <p><em>Exceptional </em>food combined with wonderful service - the mushroom parfait and the beef ribs were sensational.<br><em>Can’t wait to return!</em><br>Written 19 August 2024</p>
+                        </div>
+                    </div>
+
+                    <div id="box-4">
+                        <div class="review-header">
+                            <p id="username">BJM</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div> 
+
+                        <div id="key-quote">
+                            <p><b><em>"Stunning food"</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • friends</p>
+                        </div>
+
+                        <div id="comment">
+                            <p>Booked to dine here on a Friday night having been a fan of the owners YouTube account for a while now. The restaurant was busy but we got seated straight away and were given water by the waiter. We were left with the menu for 10 mins or so and then ordered our drinks and food. <br>
+                            Between the two of us we had the corn ribs and croquettes to start and for main sirloin steak and the halibut tikka with muscles. We both went for the Chelsea tart for dessert.<br>
+                            I was slightly worried that it wouldn't live up to expectations given how much I'd hyped it up in the build up but it was genuinely one of the <em>best meals I've had all year.</em> Some of the most <em>flavoursome, lip smacking, finger licking food I've ever eaten.</em> I could eat those corn ribs every day for the rest of my life and never get bored. Absolutely <em>adored</em> this place and will definitely return when I'm next in London
+                           <br>Written 20 August 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="third-row">
+                    <div id="box-5">
+                        <div class="review-header">
+                            <p id="username">Elizabeth S</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+
+                        <div id="key-quote">
+                            <p><b><em>"Yum!"</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • couples</p>
+                        </div>
+
+                        <div id="comment">
+                            <p>Had a great dinner here during our trip to London from the states. Highly recommend the mushroom parfait, ribs, and strawberry custard cream. The mussels and burger were also very good. Server was attentive and had great knowledge of the menu.
+                            <br>Written 24 August 2024</p>
+                        </div>
+
+                        
+                        <div>
+                            <i class="fa-solid fa-utensils" style="color: #2b3336;"></i>
+                        </div>
+
+                        <div id="reply">
+                            <p id="restaurant-name">Roe Restaurant reply</p>
+                            <p>Thanks so much for your lovely review and we're so pleased that you enjoyed your experience with us. We absolutely love the mushroom parfait and ribs too! We're pleased to hear that the team looked after you too. Hopefully we'll see you again on another trip to London. We also think you will love our sister restaurant, Roe which is located in Wood Wharf so please join us there and we'll make sure you're looked after.
+                            <br>Written 2 September 2024</p>
+                        </div>
+                    </div>
+
+                    <div id="box-6">
+                        <div class="review-header">
+                            <p id="username">Handyspanner</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                            </div>
+                        </div>
+                    
+                        <div id="key-quote">
+                            <p><b><em>"Nice food but cramped and erratic dining experience"</em></b></p>
+                        </div>
+
+                        <div id="date-type">
+                            <p>Aug 2024 • family</p>
+                        </div>
+
+                        <div id="comment">
+                            <p>Came for lunch, enjoyed the corn ribs and mushroom parfait to start, then we had pork roast. The vegetables, roasties and meat could not be faulted. <br>
+                            The negative bit was the service, we had to chase our drinks<em>(3 times)</em> and our server was a little erratic and rushed.<br>
+                            A very busy place, luckily we were three and were given a table for four. It was a little tight for couples who appeared “crammed “ on small tables for two that were close together.<br>
+                            Nice food but a hectic and confined eating experience. Also question people being allowed to bring dogs into the restaurant, also allowing it to feed there.
+                            <br>Written 26 August 2024</p>
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-utensils" style="color: #2b3336;"></i>
+                        </div>
+
+                        <div id="reply">
+                            <p id="restaurant-name">Roe Restaurant reply</p>
+                            <p>Thank you for your feedback and we're so pleased that you enjoyed the food. Sorry to hear that the service was not up to expected standards, whilst we strive to always offer an excellent experience, we understand sometimes we don't deliver on this and are always looking for ways to improve. We hope that despite this, you'll join us again soon so we can offer you a better experience. Kind regards, The Fallow Team
+                            <br>Written 2 September 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
         
+        <!--find us-->
+        <section class="container" id="find-us">
+            <h2>FIND US</h2>
+
+            <div class="location-information" >
+               <p> Lancaster's is on ground level, with an accessible bathroom situated on the same floor.</p>
+            </div>
         </section>
     </main>
 
@@ -265,6 +533,11 @@
                         <a href="https://www.tiktok.com/@fallow_restaurant?lang=en" target="_blank"><i class="fa-brands fa-tiktok fa-xl" style="color:white;"></i></a> Tiktok
                     </li>
                 </ul>
+            </section>
+
+            <section class="other-links">
+                <h3>OTHER LINKS</h3>
+                <a href="staff-page.html">Staff</a>
             </section>
         </div>
 

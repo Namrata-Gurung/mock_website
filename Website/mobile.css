@@ -1,0 +1,79 @@
+@media screen and (max-width:600px){
+    
+    /* NAVIGATION BAR */
+    .nav-menu-container{
+        display: inline-block;
+        cursor: pointer;
+        z-index:1000;
+    }
+
+    /*hide nav links*/
+    #links{
+        display: none;
+     }
+
+     #social-media{
+         display:none;
+     }
+
+     .overlay-menu{
+         position: fixed;
+         height: 1005px; 
+         width:100%;
+         top:0;
+         bottom:0;
+         right:0;
+         left:0;
+         background-color:#2B3336;
+         overflow:hidden;
+         display:none;
+         z-index:999;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+     #overlay-links{
+         position:absolute;
+         top:20%;
+         bottom:20%
+     }
+     #overlay-links > ul > li{
+         list-style-type: none;
+         text-align: center;
+     }
+
+     #overlay-links > ul > li > a{
+         color:#A9A8A6;
+         font-size: 40px;
+         margin: 15px 0;
+         text-decoration:none;
+     }
+     #overlay-links > ul > li > a:hover{
+         color:white;
+     }
+     
+
+
+     /* MENU */
+     .menu-button-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        /*size of menu panels*/
+        height:200px;
+        width:100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    
+    /* REVIEWS */
+    .first-row, .second-row, .third-row{
+        flex-direction: column;
+        gap:10px;
+    }
+
+}

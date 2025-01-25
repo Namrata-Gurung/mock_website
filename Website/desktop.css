@@ -1,3 +1,5 @@
+html,
+body,
 main, 
 header, 
 section, 
@@ -5,6 +7,8 @@ footer {
     margin: 0;
     padding: 0;
     border-style:none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .container{
     display:flex;
@@ -89,10 +93,17 @@ nav{
 #social-media > ul{
     display:flex;
     list-style: none;
-    gap:25px;
+    gap:15px;
     margin:0;
     padding:0;
 }
+/* style overlay social media links*/
+#overlay-social-media{
+    display:flex;
+    gap:20px;
+    justify-content: center;
+}
+
 
 /*style reservation button*/
 #booking-button{
@@ -123,7 +134,10 @@ nav{
 /*header----------------------------*/
 #header{
     position: relative;
-    background:url(images/food/food-2.jpeg) no-repeat center center/cover;
+    background:url(images/food/food-2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100vh;
 
     display:flex;
@@ -162,30 +176,6 @@ nav{
     cursor:pointer;
 }
 
-/*key information-------------------*/
-
-#key-information{
-    border: 15px solid #2B3336;
-    background-color:#2B3336;
-}
-.key-information-elements{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white;
-    gap:40px;
-}
-.opening-hours{
-    text-align: center;
-}
-.address{
-    text-align: center;
-}
-.address > p > small > a{
-    color:#A9A8A6;
-}
-
 /*our story-------------------------*/
 #our-story{
     display:flex;
@@ -193,7 +183,7 @@ nav{
     padding:30px;
     gap:40px;
     border-top: 100px solid white;
-    border-bottom: 150px solid white ;
+    border-bottom: 100px solid white ;
 }
 #our-story > h2{
     text-align: center;
@@ -202,17 +192,23 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:40px;
+    gap:30px;
     justify-content: center;
 }
 .story-elements{
-    max-width:300px;
+    max-width:350px;
+    height: 350px;
     border:5px solid #2B3336;
     padding:10px;
     background-color: #2B3336;
     color: white;
+    text-align: center;
 }
-
+#story-information{
+    display: inline-block;
+    text-align: center;
+    padding: 50px;
+}
 /*quotes scrolling------------------*/
 #quotes{
     background-color:#2B3336;
@@ -242,46 +238,221 @@ nav{
     font-size: 25px;
 }
 
-/*menu*/
+/*menu-------------------------------*/
 /*adapted code sourced from: https://www.w3schools.com/howto/howto_css_parallax.asp */
 .parallax{
-    background-image:url(images/food/food-6.jpeg) ;
-    min-height: 400px;
+    background-image:url(images/food/food-6.jpeg)  ;
+    min-height: 700px;
     /*scrolling effect*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: none;
     background-size: cover;
-
 }
-#menu{
-    background-color: #2B3336;
-    color: white;
-    border-top: 120px solid #2B3336;
-    border-bottom: 150px solid #2B3336;
+#menus{
+    background-color: white;
+    color: #2B3336;
+    border-top: 120px solid white;
+    border-bottom: 90px solid white;
 }
-#menu > h2{
+#menus > h2{
     text-align: center;
 }
-.menu-elements{
+.menu-panels{
     display: flex;
     justify-content: center;
-    padding:30px;
+    flex-wrap: wrap;
+    gap:20px;
+    padding:20px;
+}
+.menu-button-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    /*size of menu panels*/
+    height:400px;
+    width:250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu-button-container > button{
+    padding:8px 18px;
+    background-color: #A9A8A6;
+    color:#2B3336;
+    font-family: serif;
+    font-size: 22px;
+    border: none;
+    margin:60px;
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+.menu-button-container > button:hover{
+    background-color:#2B3336;
+    color:white;
+    cursor:pointer;
+}
+#breakfast{
+    background-image: url(images/food/food-5.jpeg);
+}
+#lunch{
+    background-image: url(images/food/food-3.jpeg);
+}
+#dinner{
+    background-image: url(images/food/food-service-2.jpeg);
+}
+#drinks{
+    background-image: url(images/people/robert-glasses.jpeg);
+}
+#desserts{
+    background-image: url(images/food/food-4.jpeg);
+}
+#menu-information{
+    text-align:center;
+    padding:40px;
 }
 
-/*Reviews*/
-#reviews{
-    text-align: center;
-    border-top: 100px solid white;
+/*code adapted from source:https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    overflow:auto;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dinner-content{
+    background-color: white;
+    margin:auto;
+    padding:20px;
+    width:80%;
+    max-width:800px;
+    border-radius:10px;
+    max-width: 90%;
+    max-height: 90%;
+}
+.pdf{
+    width:100%;
+    height: 600px;
+}
+.close{
+    position: absolute;
+    top:40px;
+    right: 40px;
+    cursor:pointer;
 }
 
-/*Reservations*/
+/*adapted code sourced from: https://www.w3schools.com/howto/howto_css_parallax.asp */
+.parallax-2{
+    background-image:url(images/food/food-7.jpeg)  ;
+    min-height: 700px;
+    /*scrolling effect*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+/*Reservation-----------------------*/
 #reservations{
     text-align: center;
     border-top: 100px solid white;
+    border-bottom: 100px solid white;
+}
+
+/*Reviews--------------------------*/
+#reviews{
+    background-color: #2B3336;
+    font-size: smaller;
+    border-top: 30px solid #2B3336;
+    border-bottom: 100px solid #2B3336;
+}
+.review-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10px;
+    padding:20px; ;
+}
+.review-content > h2{
+    text-align: center;
+    color: white;
+    padding:50px
+}
+.first-row, .second-row, .third-row{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+#box-1, #box-2, #box-3, #box-4, #box-5, #box-6{
+    background-color: white;
+    background-image: url(images/background.jpg);
+    text-align: center;
+    color: #2B3336;
+    padding:10px;
+}
+#box-1{
+    flex:85%;
+}
+#box-2{
+    flex:15%;
+}
+#box-3{
+    flex:20%;
+}
+#box-4{
+    flex:80%
+}
+#box-5{
+   flex:35% 
+}
+#box-6{
+    flex:65%
+}
+#key-quote{
+    font-size: large;
+}
+#username{
+    font-size: medium;
+}
+.review-header{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content:center;
+    gap:10px;
+}
+#restaurant-name{
+    font-size: medium;
 }
 
 
+/*find us---------------------------*/
+#find-us{
+    text-align: center;
+    color: white;
+    background-image: url(images/rerestaurant/restaurant-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    padding: 50px 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.location-information{
+    background-color: rgba(0, 0, 0, 0.4); 
+}
 /*footer --------------------------------------------------------------- */
 #footer{
     background: #2B3336;
